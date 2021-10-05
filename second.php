@@ -55,7 +55,40 @@
     for ($x = 1; $x < 11; $x++) {
       echo "<p>The number is: $x </p>";
     }
+
+    for ($x = 1; $x <= 10; $x++) {
+echo ' <p> No ' . $x . ' : ';
+for ($y = 1; $y <= 5; $y++) {
+echo $y . ' , ';
+}
+echo ' </p> ';
+}
     ?>
+    <center>
+    <h3>Arr Form</h3>
+    <?php
+    $arrForm = [
+      'name' => 'Ivan Ivanov',
+      'family' => [
+        'wife' => 'Petq Ivanova',
+        'son' => 'Aleks Ivanov',
+        'daugther' => 'Viktoria Ivanova',
+        'son_girlfriend' => 'Maraq Petrova',
+        'daugther_boyfriend' => 'Niki Aleksandrov',
+      ],
+      'address' => [
+        'city' => 'Vratsa',
+        'street' => 'Demokracia',
+        'number' => 33,
+      ],
+      'work' => [
+        'dads_work' => 'Botevgrad_IMI',
+        'moms_work' => 'Hospital',
+      ],
+    ];
+    print_r($arrForm);
+     ?>
+   </center>
   </div>
 </body>
 </html>
