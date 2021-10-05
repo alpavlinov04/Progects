@@ -34,7 +34,7 @@ echo $_POST["Email"];
 
 <h2>PHP Form Validation</h2>
 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
-  Two Name: <input type="text" name="Name">
+  Name: <input type="text" name="Name">
   <br><br>
   E-mail: <input type="text" name="Email">
   <br><br>

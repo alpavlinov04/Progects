@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <style>
+  table, th, td {
+    border:1px solid black;
+  }
+</style>
 </head>
 <body>
   <div>
@@ -57,38 +62,71 @@
     }
 
     for ($x = 1; $x <= 10; $x++) {
-echo ' <p> No ' . $x . ' : ';
-for ($y = 1; $y <= 5; $y++) {
-echo $y . ' , ';
-}
-echo ' </p> ';
-}
+      echo ' <p> No ' . $x . ' : ';
+      for ($y = 1; $y <= 5; $y++) {
+        echo $y . ' , ';
+      }
+      echo ' </p> ';
+    }
     ?>
     <center>
-    <h3>Arr Form</h3>
+      <h3>Arr Form</h3>
+      <?php
+      $arrForm = [
+        'name' => 'Ivan Ivanov',
+        'family' => [
+          'wife' => 'Petq Ivanova',
+          'son' => 'Aleks Ivanov',
+          'daugther' => 'Viktoria Ivanova',
+          'son_girlfriend' => 'Maraq Petrova',
+          'daugther_boyfriend' => 'Niki Aleksandrov',
+        ],
+        'address' => [
+          'city' => 'Vratsa',
+          'street' => 'Demokracia',
+          'number' => 33,
+        ],
+        'work' => [
+          'dads_work' => 'Botevgrad_IMI',
+          'moms_work' => 'Hospital',
+        ],
+      ];
+      print_r($arrForm);
+
+      ?>
+      <table>
+        <?php
+        $n = 4; $m = 6; $arr = [];
+        for ($i = 0; $i < $n; $i++){
+          $arr[$i] = [];
+          for($j = 0; $j < $m; $j++){
+            $arr [$i][$j] = 1;
+          }
+        }
+        echo '<table>';
+        for($p = 0; $p < $n; $p++){
+          echo '<tr>';
+          for($k = 0; $k < $m; $k++){
+            echo '<td>';
+            echo $arr [$p][$k];
+            echo '</td>';
+          }
+          echo '</td>';
+        }
+        echo '</table>';
+        ?>
+      </table>
+    </center>
     <?php
-    $arrForm = [
-      'name' => 'Ivan Ivanov',
-      'family' => [
-        'wife' => 'Petq Ivanova',
-        'son' => 'Aleks Ivanov',
-        'daugther' => 'Viktoria Ivanova',
-        'son_girlfriend' => 'Maraq Petrova',
-        'daugther_boyfriend' => 'Niki Aleksandrov',
-      ],
-      'address' => [
-        'city' => 'Vratsa',
-        'street' => 'Demokracia',
-        'number' => 33,
-      ],
-      'work' => [
-        'dads_work' => 'Botevgrad_IMI',
-        'moms_work' => 'Hospital',
+    $cars = [
+      [
+        'brand' => 'Volvo',
+        'Model' => 's60',
+        'stock' => '15',
+        ''
       ],
     ];
-    print_r($arrForm);
-     ?>
-   </center>
+    ?>
   </div>
 </body>
 </html>
