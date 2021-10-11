@@ -123,9 +123,12 @@
         'brand' => 'Volvo',
         'Model' => 's60',
         'stock' => '15',
-        ''
+        'sold' => '25',
+        'price' => '10000',
       ],
+      
     ];
+    print_r($cars);
     ?>
   </div>
 </body>
