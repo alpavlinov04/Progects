@@ -1,16 +1,11 @@
-<?php
-session_start();
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
   <style>
   body {background-color: white;}
   h1 {color: black; text-align: center; font-family: cursive; font-size: 160%;}
-  p {color: black; text-align: left;; font-family: cursive; font-size: 100%; text-align: center;}
-  a{
-    color: black; text-align: center; font-family: cursive; font-size: 160%;
-  }
+  h2 {color: black; text-align: left;; font-family: cursive; font-size: 160%; text-align: center;}
+  p {color: black; text-align: right; font-family: cursive; font-size: 100%; text-align: center;}
   .button {
     border: none;
     color: white;
@@ -40,19 +35,12 @@ session_start();
     text-align: center;
     color: white;
   }
-  article {
-    -webkit-flex: 4;
-    -ms-flex: 4;
-    flex: 4;
-    background-color: white;
-    padding: 10px;
-  }
-
   </style>
   <meta charset="UTF-8">
   <title>ALEXIX</title>
 </head>
 <body>
+  
   <header>
     <img src="Alex.jpg" alt="Alex logo" width="200" height="200">
     <h1>ALEXIX ONLAIN SHOP</h1>
@@ -62,23 +50,13 @@ session_start();
     </p>
   </header>
   <p></p>
-  <article>
-    <img src="Jacket.jpg" alt="Men's winter jacket" width="250" height="300">
-    <a href="jaket.php">Men's winter jacket</a>
-    <p></p>
-    <img src = "Jacket2.jpg" alt = "Female winter jacket" width = "250" height="300">
-    <a href="jaket2.php">Female's winter jacket</a>
-    <p></p>
-    <img src="T-shirt.jpg" alt="Men's T-shirt" width = "250" height="300">
-    <a href="T-shirt.php"> Men's T-shirt</a>
-    <p></p>
-    <img src="T-shirt2.jpg" alt  = "Female T-shirt" width = "250" height="300">
-    <a href="T-shirt2.php">Female T-shirt</a>
-    <p></p>
-    <img src="T-shirt3.jpg" alt  = "Girl's T-shirt" width = "250" height="300">
-    <a href="T-shirt3.php">Girl's T-shirt</a>
-    <p></p>
-  </article>
+  <h2>Female T-shirt</h2>
+  <center>
+    <img src="T-shirt2.jpg" alt  = "Female T-shirt" width = "auto" height="auto">
+  </center>
+  <p></p>
+  <p>Very good female t-shirt. With print 'be happy'. 100% cotton.</p>
+  <p>Price BGN 9.</p>
   <footer>
     <p> ALEXIX FASHION </p>
     <p> Contack </p>
