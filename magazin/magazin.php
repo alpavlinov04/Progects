@@ -8,6 +8,9 @@ session_start();
   body {background-color: white;}
   h1 {color: black; text-align: center; font-family: cursive; font-size: 160%;}
   p {color: black; text-align: left;; font-family: cursive; font-size: 100%; text-align: center;}
+  a{
+    color: black; text-align: center; font-family: cursive; font-size: 160%;
+  }
   .button {
     border: none;
     color: white;
@@ -19,36 +22,34 @@ session_start();
     margin: 4px 2px;
     cursor: pointer;
   }
-  .button1 {background-color: red;}
+  .button1:hover {
+  background-color: #800000;
+  color: white;
+}
+  .button1 {background-color: #FF3300;}
   </style>
   <meta charset="UTF-8">
-  <title>Alexis</title>
+  <title>ALEXIX</title>
 </head>
 <body>
-  <a class="button button1" href="aplication.php">Register form</a>
 
-  <h1>Alexis onlain shop!</h1>
   <center>
   <img src="Alex.jpg" alt="Alex logo" width="200" height="200">
 </center>
+  <h1>ALEXIX ONLAIN SHOP</h1>
   <p></p>
-  <p>Men's winter jacket</p>
-  <img src="Jacket.jpg" alt="Men's winter jacket" width="auto" height="auto">
+<p align="right">
+<a class="button button1" href="aplication.php">Register form</a>
+</p>
   <p></p>
-  <p>Very good men's winter jacket. Ideal for all winter conditions. With additional sweatshirt. Internal pocket. Ideally up to -15 degrees.</p>
-  <p>Price BGN 50.</p>
+  <img src="Jacket.jpg" alt="Men's winter jacket" width="250" height="300">
+  <a href="jaket.php">Men's winter jacket</a>
   <p></p>
-  <p>Female's winter jacket</p>
-  <img src = "Jacket2.jpg" alt = "Female winter jacket" width = "auto" height="auto">
+  <img src = "Jacket2.jpg" alt = "Female winter jacket" width = "250" height="300">
+  <a href="jaket2.php">Female's winter jacket</a>
   <p></p>
-  <p>Very good Female winter jacket. Ideal for all winter conditions. With additional sweatshirt. Internal pocket. Ideally up to -15 degrees.</p>
-  <p>Price BGN 55.</p>
-  <p></p>
-  <p>Men's T-shirt</p>
-  <img src="T-shirt.jpg" alt  = "Men's T-shirt" width = "auto" height="auto">
-  <p></p>
-  <p>Very good men's t-shirt. With print 'A.V.E.R.I'. 100% cotton.</p>
-  <p>Price BGN 8.</p>
+  <img src="T-shirt.jpg" alt="Men's T-shirt" width = "250" height="300">
+  <a href="T-shirt.php"> Men's T-shirt</a>
   <p></p>
   <p>Female T-shirt</p>
   <img src="T-shirt2.jpg" alt  = "Female T-shirt" width = "auto" height="auto">
