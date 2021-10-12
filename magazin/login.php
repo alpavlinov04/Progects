@@ -22,13 +22,13 @@
   <p></p>
   <center>
     <?php
-    $Name = $Email =  $Password = "";
+    $Email =  $Password = $Money ="";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-      $Name = test_input($_POST["Name"]);
       $Email = test_input($_POST["Email"]);
       $Password = test_input($_POST["Password"]);
+      $Money = test_input($_POST["Money"]);
     }
 
     function test_input($data) {
@@ -41,19 +41,18 @@
     session_start();
     $_SESION[$Email]=$_POST["Email"];
     $_SESION[$Password]=$_POST["Password"];
+    $_SESION[$Money]=$_POST["Money"];
     ?>
 
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
-      <h1>Register form</h1>
-      <p>Name: <input type="text" name="Name"></p>
-      <p>E-mail: <input type="text" name="Email"></p>
+      <h1>Login</h1>
+      <p>E-mail: <input type="email" name="Email"></p>
       <p>Password: <input type= "password" name = "Password"></p>
+      <p>Your count of money: <input type="number" name="Money"></p>
       <br><br>
-      <p><a href="login.php"><input type="submit" name="submit" value="Submit"></a></p>
+      <p><a href="magazin.php"><input type="submit" name="submit" value="Submit"></a></p>
       <br><br>
     </form>
-    <p>Or you have acount</p>
-    <a class="button button1" href="login.php" align="center">Login</a>
   </center>
   <footer>
     <p> ALEXIX FASHION </p>

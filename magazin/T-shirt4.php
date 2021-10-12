@@ -21,7 +21,7 @@
   return $data;
 }
    ?>
-   <a class="button button2" href="" align="center">Cart</a>
+  <a class="button button2" href="" align="center">Cart</a>
   <a class="button button1" href="aplication.php" align="center">Register form</a>
   <ul>
     <li><a class="active" href="magazin.php">Home</a></li>
@@ -30,17 +30,17 @@
 
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
-    <img src="Alex.jpg" alt="Alex logo" width="200" height="200">
+    <img src="Alex.jpg" alt="Alex logo" width="100" height="100">
     <p></p>
 
   </header>
   <p></p>
-  <h2>Girl's T-shirt</h2>
+  <h2>Boy's T-shirt</h2>
   <center>
-    <img src="T-shirt3.jpg" alt  = "Girl's T-shirt" width = "auto" height="auto">
+    <img src="T-shirt4.jpg" alt  = "Boy's T-shirt" width = "auto" height="auto">
   </center>
   <p></p>
-  <p>Very good girl's t-shirt. With print. 100% cotton.</p>
+  <p>Very good boy's t-shirt. With print. 100% cotton.</p>
   <p>Price BGN 5.</p>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     Size:
