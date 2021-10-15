@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
   <a class="button button2" href="" align="center">Cart</a>
-  <a class="button button1" href="aplication.php" align="center">Register form</a>
+  <a class="button button1" href="login.php" align="center">Register form</a>
 
   <ul>
     <li><a class="active" href="magazin.php">Home</a></li>
