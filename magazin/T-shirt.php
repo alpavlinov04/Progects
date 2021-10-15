@@ -22,7 +22,7 @@
 }
    ?>
    <a class="button button2" href="Cart.php" align="center">Cart</a>
-  <a class="button button1" href="aplication.php" align="center">Register form</a>
+  <a class="button button1" href="login.php" align="center">Login</a>
   <ul>
     <li><a class="active" href="magazin.php">Home</a></li>
     <li><a href="Contact.php">Contact</a></li>
@@ -44,7 +44,7 @@
   <p>Price BGN 8.</p>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     Size:
-    <input type="checkbox" name="" value="">S
+    <input type="checkbox" name="S" value="">S
     <input type="checkbox" name="M" value="M">M
     <input type="checkbox" name="L" value="L">L
     <input type="checkbox" name="XL" value="XL">XL

@@ -6,7 +6,7 @@
   <title>ALEXIX</title>
 </head>
 <body>
-  <a class="button button2" href="" align="center">Cart</a>
+  <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="aplication.php" align="center">Register form</a>
   <ul>
     <li><a class="active" href="magazin.php">Home</a></li>

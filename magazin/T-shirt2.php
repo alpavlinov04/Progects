@@ -22,7 +22,7 @@
 }
    ?>
    <a class="button button2" href="Cart.php" align="center">Cart</a>
-  <a class="button button1" href="aplication.php" align="center">Register form</a>
+  <a class="button button1" href="login.php" align="center">Login</a>
   <ul>
     <li><a class="active" href="magazin.php">Home</a></li>
     <li><a href="Contact.php">Contact</a></li>
@@ -44,7 +44,7 @@
   <p>Price BGN 9.</p>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     Size:
-    <input type="checkbox" name="" value="">S
+    <input type="checkbox" name="S" value="">S
     <input type="checkbox" name="M" value="M">M
     <input type="checkbox" name="L" value="L">L
     <input type="checkbox" name="XL" value="XL">XL
@@ -53,7 +53,7 @@
   <form method="post" action="...addCart.php">
     <input type="number" class="peaces"  min="0" max="100">
     <input type="hidden" name="custId" value="<?php echo $key; ?>">
-    <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
+    <button class="Cart" href="Cart.php" class="active"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
   <footer>
     <p> ALEXIX FASHION </p>

@@ -12,7 +12,7 @@
   $Size = "";
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
-    $Size = test_inaut($_POST["Size"]);
+    $Size = test_input($_POST["Size"]);
   }
   function test_input($data) {
   $data = trim($data);
@@ -22,9 +22,9 @@
 }
    ?>
    <a class="button button2" href="Cart.php" align="center">Cart</a>
-  <a class="button button1" href="aalication.aha" align="center">Register form</a>
+  <a class="button button1" href="login.php" align="center">Login</a>
   <ul>
-    <li><a class="active" href="magazin.aha">Home</a></li>
+    <li><a class="active" href="magazin.php">Home</a></li>
     <li><a href="Contact.php">Contact</a></li>
   </ul>
 
@@ -45,7 +45,7 @@
   <br>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     Size:
-    <input type="checkbox" name="" value="">S
+    <input type="checkbox" name="S" value="">S
     <input type="checkbox" name="M" value="M">M
     <input type="checkbox" name="L" value="L">L
     <input type="checkbox" name="XL" value="XL">XL
