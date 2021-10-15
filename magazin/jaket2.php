@@ -21,7 +21,7 @@
   return $data;
 }
    ?>
-   <a class="button button2" href="" align="center">Cart</a>
+   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="aplication.php" align="center">Register form</a>
   <ul>
     <li><a class="active" href="magazin.php">Home</a></li>
@@ -51,9 +51,9 @@
     <input type="checkbox" name="XXL" value="XL">XXL
   </form>
   <form method="post" action="...addCart.php">
-    <input type="number" class="peaces" placeholder="Pcs" min="0" max="100">
+    <input type="number" class="peaces" min="0" max="100">
     <input type="hidden" name="custId" value="<?php echo $key; ?>">
-    <button class="Cart"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
+    <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
   <footer>
     <p> ALEXIX FASHION </p>

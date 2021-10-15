@@ -50,7 +50,7 @@
       <p>Password: <input type= "password" name = "Password"></p>
       <p>Your count of money: <input type="number" name="Money"></p>
       <br><br>
-      <p><a href="magazin.php"><input type="submit" name="submit" value="Submit"></a></p>
+      <p href="magazin.php"><input type="submit" name="submit" value="Submit" href="magazin.php"></p>
       <br><br>
     </form>
   </center>
