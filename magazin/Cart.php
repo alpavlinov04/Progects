@@ -1,6 +1,5 @@
 <?php
 include 'session.php';
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -69,8 +68,8 @@ include 'session.php';
   </header>
   <p></p>
   <center>
-    <?php foreach ($_SESSION['cart'] as $key => $value): ?>
-    <form action="session.php" method="get">
+
+    <form action="cart.php" method="get">
       <div class="small-container cart-page">
         <table>
           <tr>
@@ -82,20 +81,20 @@ include 'session.php';
             <td>
               <div class="cart-info">
 
-                <img src="<?php echo $value['image']; ?>">
+                <img src="<?php echo $cart['image']; ?>">
                 <div>
-                  <p>"<?php echo $value["name"]; ?>"</p>
-                  <small>Price: <?php echo $value["price"]; ?></small>
+                  <p>"<?php echo $cart['name']; ?>"</p>
+                  <small>Price: <?php echo $cart['price']; ?></small>
                   <br>
                   <a href="">Remove</a>
                 </td>
               </tr>
               <td><input type="number" value=" " min="0" max="100"</td>
-              <td>"<?php echo $value["price"]; ?>"</td>
+              <td>"<?php echo $cart['price']; ?>"</td>
             </table>
           </div>
         </form>
-      <?php endforeach; ?>
+
         <form action="magazin.php" class="container" method="post">
           <h1>Cart</h1>
           <label for="name"><b>Name</b></label>
@@ -119,9 +118,9 @@ include 'session.php';
         <?php
         $Name = $Country = $City = $Address = $PostsCode = "";
 
-        $_SESION["Name"]=$_POST["Name"];
-        $_SESION["Address"]=$_POST["Address"];
-        $_SESION["Country"]=$_POST["Country"];
+        $_SESSION["Name"]=$_POST["Name"];
+        $_SESSION["Address"]=$_POST["Address"];
+        $_SESSION["Country"]=$_POST["Country"];
         ?>
       </center>
       <footer>

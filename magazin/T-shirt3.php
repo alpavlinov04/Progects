@@ -17,7 +17,7 @@ include 'session.php';
   {
     $Size = test_input($_POST["Size"]);
   }
-  $_SESION['Size'] = $_POST['Size'];
+  $_SESSION['Size'] = $_POST['Size'];
   ?>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
@@ -55,20 +55,20 @@ include 'session.php';
     <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
   <?php
-  if($Money < $products['price'])
+  if($Money < $cart['price'])
   {
     echo "You don't have inafe many!";
   }
   ?>
   <?php
-  $tshirt3 = array([
+  $tshirt3 = [
     'name' => "Girls T-shirt",
     'price' => "5 BGN",
     'image' => "T-shirt3.jpg",
     'link' => "T-shirt3.php",
     'Size' => "Size",
-    ]);
-    $_SESION['cart'] = $tshirt3;
+    ];
+    $_SESSION['cart'] = $tshirt3;
     array_push($tshirt3, $cart);
     ?>
     <footer>

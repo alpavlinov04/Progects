@@ -17,7 +17,7 @@ include 'session.php';
   {
     $Size = test_input($_POST["Size"]);
   }
-$_SESION['Size'] = $_POST['Size'];
+$_SESSION['Size'] = $_POST['Size'];
   ?>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
@@ -56,14 +56,14 @@ $_SESION['Size'] = $_POST['Size'];
     <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
   <?php
-  $jacket2 = array([
+  $jacket2 = [
     'name' => "Womens winter jaket",
     'price' => "60 BGN",
     'image' => "Jacket2.jpg",
     'link' => "jaket2.php",
     'Size' => "Size",
-    ]);
-    $_SESION['cart'] = $jacket2;
+    ];
+    $_SESSION['cart'] = $jacket2;
     array_push($jacket2, $cart);
     ?>
     <footer>
