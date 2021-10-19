@@ -1,6 +1,6 @@
 <?php
 include 'session.php';
- ?>
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -17,10 +17,10 @@ include 'session.php';
   {
     $Size = test_input($_POST["Size"]);
   }
-  
+
 
   ?>
-   <a class="button button2" href="Cart.php" align="center">Cart</a>
+  <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
   <ul>
     <li><a class="active" href="magazin.php">Home</a></li>
@@ -30,8 +30,8 @@ include 'session.php';
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
     <div class="logo">
-    <img src="Alex.jpg" alt="Alex logo" width="125">
-  </div>
+      <img src="Alex.jpg" alt="Alex logo" width="125">
+    </div>
     <p></p>
 
   </header>
@@ -57,12 +57,24 @@ include 'session.php';
     <input type="hidden" name="custId" value="<?php echo $key; ?>">
     <button class="Cart"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
+  <?php
+  $jacket = array(
+    'name' => "Mens winter jaket",
+    'price' => "90 BGN",
+    'image' => "Jacket.jpg",
+    'link' => "jaket.php",
+    'Size' => "Size",
+  );
+  $_SESION['cart'] = $jacket;
+  array_push($jacket);
+  ?>
   <footer>
     <p> ALEXIX FASHION </p>
     <p> Contact </p>
     <p> E-mail: aleksaav2004@gmail.com </p>
-    <p> ahone number: 0876714631 </p>
-    <p> Address: city of Vratsa, Kokiche Street 14 </p>
+    <p> ahone number: +359876714631 </p>
+    <p> Address: City of Vratsa, Kokiche Street 14 </p>
   </footer>
+
 </body>
 </html>

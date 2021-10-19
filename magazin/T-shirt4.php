@@ -1,6 +1,6 @@
 <?php
 include 'session.php';
- ?>
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -17,13 +17,8 @@ include 'session.php';
   {
     $Size = test_inaut($_POST["Size"]);
   }
-  function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-   ?>
+  $_SESION['Size'] = $_POST['Size'];
+  ?>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
   <ul>
@@ -34,8 +29,8 @@ include 'session.php';
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
     <div class="logo">
-    <img src="Alex.jpg" alt="Alex logo" width="125">
-  </div>
+      <img src="Alex.jpg" alt="Alex logo" width="125">
+    </div>
     <p></p>
 
   </header>
@@ -59,12 +54,23 @@ include 'session.php';
     <input type="hidden" name="custId" value="<?php echo $key; ?>">
     <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
-  <footer>
-    <p> ALEXIX FASHION </p>
-    <p> Contact </p>
-    <p> E-mail: alekspav2004@gmail.com </p>
-    <p> Phone number: 0876714631 </p>
-    <p> Address: city of Vratsa, Kokiche Street 14 </p>
-  </footer>
-</body>
-</html>
+  <?php
+  $tshirt4 = array($_SESION['cart'], [
+    'name' => $_POST["Boys T-shirt"],
+    'price' => $_POST["5 BGN"],
+    'image' => $_POST["T-shirt4.jpg"],
+    'link' => $_POST["T-shirt4.php"],
+    'Size' => $_POST[$Size],
+    'Key' => $_POST[$key],
+    ]);
+    array_push($tshirt4);
+    ?>
+    <footer>
+      <p> ALEXIX FASHION </p>
+      <p> Contact </p>
+      <p> E-mail: alekspav2004@gmail.com </p>
+      <p> Phone number: +359876714631 </p>
+      <p> Address: City of Vratsa, Kokiche Street 14 </p>
+    </footer>
+  </body>
+  </html>

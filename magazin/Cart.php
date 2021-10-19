@@ -39,10 +39,15 @@ include 'session.php';
     font-size: 12px;
   }
   td img{
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 150px;
     margin-right: 10px;
   }
+  .button3:hover {
+    background-color: #FFFFCC;
+    color: black;
+  }
+  .button3 {background-color: white;}
   </style>
 </head>
 <body>
@@ -63,35 +68,7 @@ include 'session.php';
   </header>
   <p></p>
   <center>
-    <?php
-    $Name = $Country = $City = $Address = $PostsCode = "";
-
-    $_SESION["Name"]=$_POST["Name"];
-    $_SESION["Address"]=$_POST["Address"];
-    $_SESION["Country"]=$_POST["Country"];
-    ?>
-
-    <form action="magazin.php" class="container" method="post">
-      <h1>Cart</h1>
-      <label for="name"><b>Name</b></label>
-      <input type="text" placeholder="Enter Name" name="name" required>
-      <br><br>
-      <label for="text"><b>Country</b></label>
-      <input type="text" placeholder="Enter Country" name="country" required>
-      <br><br>
-      <label for="text"><b>City</b></label>
-      <input type="text" placeholder="Enter City " name="city" required>
-      <br><br>
-      <label for="text"><b>Address</b></label>
-      <input type="text" placeholder="Enter Address " name="address" required>
-      <br><br>
-      <label for="number"><b>Post Code</b></label>
-      <input type="number" placeholder="Enter Post Code " name="postCode" required>
-      <br><br>
-      <button type="submit" class="button3">Login</button>
-    </form>
-    <br>
-    <?php foreach ($products as $key => $product): ?>
+    <form action="session.php" method="get">
       <div class="small-container cart-page">
         <table>
           <tr>
@@ -101,27 +78,54 @@ include 'session.php';
           </tr>
           <tr>
             <td>
-            <div class="cart-info">
-              <img src="<?php print_r($_SESION['Cart'])['image']; ?>">
-              <div>
-                <p>"<?php print_r($_SESION['Cart'])['name']; ?>"</p>
-                <small>Price: <?php print_r($_SESION['Cart'])['price']; ?></small>
-                <br>
-                <a href="">Remove</a>
-              </td>
+              <div class="cart-info">
+                <img src="<?php echo $cart["image"]; ?>">
+                <div>
+                  <p>"<?php echo $cart["name"]; ?>"</p>
+                  <small>Price: <?php echo $cart["price"]; ?></small>
+                  <br>
+                  <a href="">Remove</a>
+                </td>
               </tr>
-              <td><input type="number" value="1"</td>
-              <td>"<?php print_r($_SESION['Cart'])['price']; ?>"</td>
+              <td><input type="number" value=" " min="0" max="100"</td>
+              <td>"<?php echo $cart["price"]; ?>"</td>
             </table>
           </div>
-        <?php endforeach; ?>
+        </form>
+        <form action="magazin.php" class="container" method="post">
+          <h1>Cart</h1>
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name" required>
+          <br><br>
+          <label for="text"><b>Country</b></label>
+          <input type="text" placeholder="Enter Country" name="country" required>
+          <br><br>
+          <label for="text"><b>City</b></label>
+          <input type="text" placeholder="Enter City " name="city" required>
+          <br><br>
+          <label for="text"><b>Address</b></label>
+          <input type="text" placeholder="Enter Address " name="address" required>
+          <br><br>
+          <label for="number"><b>Post Code</b></label>
+          <input type="number" placeholder="Enter Post Code " name="postCode" required>
+          <br><br>
+          <button type="submit" class="button3">Finish</button>
+        </form>
+        <br><br>
+        <?php
+        $Name = $Country = $City = $Address = $PostsCode = "";
+
+        $_SESION["Name"]=$_POST["Name"];
+        $_SESION["Address"]=$_POST["Address"];
+        $_SESION["Country"]=$_POST["Country"];
+        ?>
       </center>
       <footer>
         <p> ALEXIX FASHION </p>
         <p> Contact </p>
         <p> E-mail: alekspav2004@gmail.com </p>
-        <p> Phone number: 0876714631 </p>
-        <p> Address: city of Vratsa, Kokiche Street 14 </p>
+        <p> Phone number: +359876714631 </p>
+        <p> Address: City of Vratsa, Kokiche Street 14 </p>
       </footer>
     </body>
     </html>

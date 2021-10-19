@@ -40,12 +40,13 @@ $products = [
     'name' => 'Boys T-shirt',
   ],
 ];
-array_push($_SESION['Cart'],[
-  'name' => $_POST['name'],
-  'price' => $_POST['price'],
-  'image' => $_POST['image'],
-  'link' => $_POST['link'],
-]);
 
-
+$cart = array(
+  'jacket' => '',
+  'jacket2' => '',
+  'tshirt' => '',
+  'tshirt2' => '',
+  'tshirt3' => '',
+  'tshirt4' => '',
+);
 ?>

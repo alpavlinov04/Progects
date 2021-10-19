@@ -1,6 +1,6 @@
 <?php
 include 'session.php';
- ?>
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -21,32 +21,32 @@ include 'session.php';
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
     <div class="logo">
-    <img src="Alex.jpg" alt="Alex logo" width="125">
-  </div>
+      <img src="Alex.jpg" alt="Alex logo" width="125">
+    </div>
     <p></p>
 
   </header>
   <p></p>
   <article>
     <center>
-    <a> ALEXIX FASHION </a>
-    <br>
-    <a> Contact: </a>
-    <br>
-    <a> E-mail: alekspav2004@gmail.com </a>
-    <br>
-    <a> Phone number: 0876714631 </a>
-    <br>
-    <a> Address: city of Vratsa, Kokiche Street 14 </a>
-    <br>
-    <p><a href="https://www.instagram.com/al.pavlinov/">Instagram: al.pavlinov</a></p>
-  </center>
-</article>
-<footer>
-  <p> ALEXIX FASHION </p>
-  <div class="logo">
-  <img src="Alex.jpg" alt="Alex logo" width="125">
-</div>
-</footer>
+      <a> ALEXIX FASHION </a>
+      <br>
+      <a> Contact: </a>
+      <br>
+      <a> E-mail: alekspav2004@gmail.com </a>
+      <br>
+      <a> Phone number: +359876714631 </a>
+      <br>
+      <a> Address: City of Vratsa, Kokiche Street 14 </a>
+      <br>
+      <p><a href="https://www.instagram.com/al.pavlinov/">Instagram: al.pavlinov</a></p>
+    </center>
+  </article>
+  <footer>
+    <p> ALEXIX FASHION </p>
+    <div class="logo">
+      <img src="Alex.jpg" alt="Alex logo" width="125">
+    </div>
+  </footer>
 </body>
 </html>

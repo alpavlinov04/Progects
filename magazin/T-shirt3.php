@@ -1,6 +1,6 @@
 <?php
 include 'session.php';
- ?>
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -17,15 +17,9 @@ include 'session.php';
   {
     $Size = test_input($_POST["Size"]);
   }
-  function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-   ?>
-   <a class="button button2" href="Cart.php" align="center">Cart</a>
+  $_SESION['Size'] = $_POST['Size'];
+  ?>
+  <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
   <ul>
     <li><a class="active" href="magazin.php">Home</a></li>
@@ -35,8 +29,8 @@ include 'session.php';
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
     <div class="logo">
-    <img src="Alex.jpg" alt="Alex logo" width="125">
-  </div>
+      <img src="Alex.jpg" alt="Alex logo" width="125">
+    </div>
     <p></p>
 
   </header>
@@ -61,17 +55,27 @@ include 'session.php';
     <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
   <?php
-  if($Money < $product.price)
+  if($Money < $products['price'])
   {
-  echo "You don't have inafe many!";
+    echo "You don't have inafe many!";
   }
   ?>
-  <footer>
-    <p> ALEXIX FASHION </p>
-    <p> Contact </p>
-    <p> E-mail: alekspav2004@gmail.com </p>
-    <p> Phone number: 0876714631 </p>
-    <p> Address: city of Vratsa, Kokiche Street 14 </p>
-  </footer>
-</body>
-</html>
+  <?php
+  $tshirt3 = array($_SESION['cart'],[
+    'name' => $_POST["Girls T-shirt"],
+    'price' => $_POST["5 BGN"],
+    'image' => $_POST["T-shirt3.jpg"],
+    'link' => $_POST["T-shirt3.php"],
+    'Size' => $_POST[$Size],
+    ]);
+    array_push($tshirt3);
+    ?>
+    <footer>
+      <p> ALEXIX FASHION </p>
+      <p> Contact </p>
+      <p> E-mail: alekspav2004@gmail.com </p>
+      <p> Phone number: +359876714631 </p>
+      <p> Address: City of Vratsa, Kokiche Street 14 </p>
+    </footer>
+  </body>
+  </html>

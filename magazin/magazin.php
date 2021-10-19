@@ -1,6 +1,6 @@
 <?php
 include 'session.php';
- ?>
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -21,39 +21,39 @@ include 'session.php';
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
     <div class="logo">
-    <img src="Alex.jpg" alt="Alex logo" width="125">
-  </div>
+      <img src="Alex.jpg" alt="Alex logo" width="125">
+    </div>
     <p></p>
 
   </header>
   <p></p>
   <article>
     <div class="center">
-    <?php foreach ($products as $key => $product): ?>
-      <table>
-        <tr>
-      <div class="responsive">
-        <div class="gallery">
+      <?php foreach ($products as $key => $product): ?>
+        <table>
+          <tr>
+            <div class="responsive">
+              <div class="gallery">
 
-          <a target="_blank" href="<?php echo $product['link']; ?>">
-          <div class="desc"><img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" width="250" height="300"></div>
-          <a href="<?php echo $product['link']; ?>">"<?php echo $product['name']; ?>"</a>
-          <br>
-          <a><?php echo $product['price']; ?></a>
+                <a target="_blank" href="<?php echo $product['link']; ?>">
+                  <div class="desc"><img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" width="250" height="300"></div>
+                  <a href="<?php echo $product['link']; ?>">"<?php echo $product['name']; ?>"</a>
+                  <br>
+                  <a><?php echo $product['price']; ?></a>
 
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    <?php endforeach; ?>
-  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            <?php endforeach; ?>
+          </div>
 
-  </article>
-  <footer>
-    <p> ALEXIX FASHION </p>
-    <p> Contact </p>
-    <p> E-mail: alekspav2004@gmail.com </p>
-    <p> Phone number: 0876714631 </p>
-    <p> Address: city of Vratsa, Kokiche Street 14 </p>
-  </footer>
-</body>
-</html>
+        </article>
+        <footer>
+          <p> ALEXIX FASHION </p>
+          <p> Contact </p>
+          <p> E-mail: alekspav2004@gmail.com </p>
+          <p> Phone number: +359876714631 </p>
+          <p> Address: City of Vratsa, Kokiche Street 14 </p>
+        </footer>
+      </body>
+      </html>
