@@ -41,12 +41,5 @@ $products = [
   ],
 ];
 
-$cart = array(
-  'jacket' => '',
-  'jacket2' => '',
-  'tshirt' => '',
-  'tshirt2' => '',
-  'tshirt3' => '',
-  'tshirt4' => '',
-);
+$cart = [];
 ?>

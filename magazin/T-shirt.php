@@ -56,15 +56,15 @@ include 'session.php';
     <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
   <?php
-  $tshirt = array($_SESION['cart'],[
-    'name' => $_POST["Mens T-shirt"],
-    'price' => $_POST["8 BGN"],
-    'image' => $_POST["T-shirt.jpg"],
-    'link' => $_POST["T-shirt.php"],
-    'Size' => $_POST[$Size],
+  $tshirt = array([
+    'name' => "Mens T-shirt",
+    'price' => "8 BGN",
+    'image' => "T-shirt.jpg",
+    'link' => "T-shirt.php",
+    'Size' => "Size",
     ]);
-
-    array_push($tshirt);
+    $_SESION['cart'] = $tshirt;
+    array_push($tshirt, $cart);
     ?>
     <footer>
       <p> ALEXIX FASHION </p>

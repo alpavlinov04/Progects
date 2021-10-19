@@ -1,5 +1,6 @@
 <?php
 include 'session.php';
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -68,6 +69,7 @@ include 'session.php';
   </header>
   <p></p>
   <center>
+    <?php foreach ($_SESSION['cart'] as $key => $value): ?>
     <form action="session.php" method="get">
       <div class="small-container cart-page">
         <table>
@@ -79,19 +81,21 @@ include 'session.php';
           <tr>
             <td>
               <div class="cart-info">
-                <img src="<?php echo $cart["image"]; ?>">
+
+                <img src="<?php echo $value['image']; ?>">
                 <div>
-                  <p>"<?php echo $cart["name"]; ?>"</p>
-                  <small>Price: <?php echo $cart["price"]; ?></small>
+                  <p>"<?php echo $value["name"]; ?>"</p>
+                  <small>Price: <?php echo $value["price"]; ?></small>
                   <br>
                   <a href="">Remove</a>
                 </td>
               </tr>
               <td><input type="number" value=" " min="0" max="100"</td>
-              <td>"<?php echo $cart["price"]; ?>"</td>
+              <td>"<?php echo $value["price"]; ?>"</td>
             </table>
           </div>
         </form>
+      <?php endforeach; ?>
         <form action="magazin.php" class="container" method="post">
           <h1>Cart</h1>
           <label for="name"><b>Name</b></label>

@@ -61,14 +61,15 @@ include 'session.php';
   }
   ?>
   <?php
-  $tshirt3 = array($_SESION['cart'],[
-    'name' => $_POST["Girls T-shirt"],
-    'price' => $_POST["5 BGN"],
-    'image' => $_POST["T-shirt3.jpg"],
-    'link' => $_POST["T-shirt3.php"],
-    'Size' => $_POST[$Size],
+  $tshirt3 = array([
+    'name' => "Girls T-shirt",
+    'price' => "5 BGN",
+    'image' => "T-shirt3.jpg",
+    'link' => "T-shirt3.php",
+    'Size' => "Size",
     ]);
-    array_push($tshirt3);
+    $_SESION['cart'] = $tshirt3;
+    array_push($tshirt3, $cart);
     ?>
     <footer>
       <p> ALEXIX FASHION </p>
