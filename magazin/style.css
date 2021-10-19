@@ -27,6 +27,11 @@ a{
   color: black;
 }
 .button2 {background-color: black;}
+.button3:hover {
+  background-color: white;
+  color: black;
+}
+.button3 {background-color: black;}
 
 header {
   background-color: #FFFFCC;
@@ -35,7 +40,13 @@ header {
   font-size: 20px;
   color: black;
 }
-
+.center {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -71,10 +82,11 @@ article {
 
 div.gallery {
   border: 1px solid #ccc;
+  float: left;
 }
 
 div.gallery:hover {
-  border: 1px solid black;
+  border: 1px solid #777;
 }
 
 div.gallery img {
@@ -121,4 +133,35 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+}
+div.cart-page{
+  margin: 80px auto;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: #FFFFCC;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #FFFFCC;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
 }

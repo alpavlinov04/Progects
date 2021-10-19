@@ -1,3 +1,6 @@
+<?php
+include 'session.php';
+ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -14,13 +17,9 @@
   {
     $Size = test_input($_POST["Size"]);
   }
-  function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-   ?>
+  
+
+  ?>
    <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
   <ul>
@@ -30,7 +29,9 @@
 
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
-    <img src="Alex.jpg" alt="Alex logo" width="200" height="200">
+    <div class="logo">
+    <img src="Alex.jpg" alt="Alex logo" width="125">
+  </div>
     <p></p>
 
   </header>
@@ -43,7 +44,7 @@
   <p>Very good men's winter jacket. Ideal for all winter conditions. With additional sweatshirt. Internal pocket. Ideally up to -15 degrees.</p>
   <p>Price BGN 90.</p>
   <br>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+  <form method="post" action="Cart.php">
     Size:
     <input type="checkbox" name="S" value="">S
     <input type="checkbox" name="M" value="M">M
@@ -51,10 +52,10 @@
     <input type="checkbox" name="XL" value="XL">XL
     <input type="checkbox" name="XXL" value="XL">XXL
   </form>
-  <form method="post" action="...addCart.php">
+  <form method="post" action="Cart.php">
     <input type="number" class="peaces"  min="0" max="100">
     <input type="hidden" name="custId" value="<?php echo $key; ?>">
-    <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
+    <button class="Cart"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
   <footer>
     <p> ALEXIX FASHION </p>

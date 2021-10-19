@@ -1,3 +1,6 @@
+<?php
+include 'session.php';
+ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -30,7 +33,9 @@
 
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
-    <img src="Alex.jpg" alt="Alex logo" width="100" height="100">
+    <div class="logo">
+    <img src="Alex.jpg" alt="Alex logo" width="125">
+  </div>
     <p></p>
 
   </header>
@@ -49,7 +54,7 @@
     <input type="checkbox" name="L" value="L">L
     <input type="checkbox" name="XL" value="XL">XL
   </form>
-  <form method="post" action="...addCart.php">
+  <form method="post" action="Cart.php">
     <input type="number" class="peaces" min="0" max="100">
     <input type="hidden" name="custId" value="<?php echo $key; ?>">
     <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>

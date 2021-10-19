@@ -1,3 +1,6 @@
+<?php
+include 'session.php';
+ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -17,7 +20,9 @@
 
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
-    <img src="Alex.jpg" alt="Alex logo" width="200" height="200">
+    <div class="logo">
+    <img src="Alex.jpg" alt="Alex logo" width="125">
+  </div>
     <p></p>
 
   </header>
@@ -39,6 +44,9 @@
 </article>
 <footer>
   <p> ALEXIX FASHION </p>
+  <div class="logo">
+  <img src="Alex.jpg" alt="Alex logo" width="125">
+</div>
 </footer>
 </body>
 </html>

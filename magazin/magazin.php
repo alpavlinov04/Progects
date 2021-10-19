@@ -1,6 +1,6 @@
 <?php
-session_start();
-?>
+include 'session.php';
+ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -20,64 +20,33 @@ session_start();
 
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
-    <img src="Alex.jpg" alt="Alex logo" width="200" height="200">
+    <div class="logo">
+    <img src="Alex.jpg" alt="Alex logo" width="125">
+  </div>
     <p></p>
 
   </header>
   <p></p>
   <article>
-    <?php
-      $products = [
-        'p1' => [
-          'price' => '90 BGN',
-          'image' => 'Jacket.jpg',
-          'link' => 'jaket.php',
-          'name' => 'Mens winter jacket',
-        ],
-        'p2' => [
-          'price' => '60 BGN',
-          'image' => 'Jacket2.jpg',
-          'link' => 'jaket2.php',
-          'name' => 'Womans winter jacket',
-        ],
-        'p3' => [
-          'price' => '8 BGN',
-          'image' => 'T-shirt.jpg',
-          'link' => 'T-shirt.php',
-          'name' => 'Mens T-shirt',
-        ],
-        'p4' => [
-          'price' => '9 BGN',
-          'image' => 'T-shirt2.jpg',
-          'link' => 'T-shirt2.php',
-          'name' => 'Womens T-shirt',
-        ],
-        'p5' => [
-          'price' => '5 BGN',
-          'image' => 'T-shirt3.jpg',
-          'link' => 'T-shirt3.php',
-          'name' => 'Girls T-shirt',
-        ],
-        'p6' => [
-          'price' => '5 BGN',
-          'image' => 'T-shirt4.jpg',
-          'link' => 'T-shirt4.php',
-          'name' => 'Boys T-shirt',
-        ],
-      ];
-      ?>
+    <div class="center">
     <?php foreach ($products as $key => $product): ?>
+      <table>
+        <tr>
       <div class="responsive">
         <div class="gallery">
+
+          <a target="_blank" href="<?php echo $product['link']; ?>">
           <div class="desc"><img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" width="250" height="300"></div>
           <a href="<?php echo $product['link']; ?>">"<?php echo $product['name']; ?>"</a>
           <br>
           <a><?php echo $product['price']; ?></a>
+
         </div>
       </div>
       <div class="clearfix"></div>
-
     <?php endforeach; ?>
+  </div>
+
   </article>
   <footer>
     <p> ALEXIX FASHION </p>
