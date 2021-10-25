@@ -7,6 +7,7 @@ include 'session.php';
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <title>ALEXIX</title>
+
 </head>
 <body>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
@@ -26,12 +27,7 @@ include 'session.php';
   </header>
   <p></p>
   <center>
-    <?php
-    $Email =  $Password = $Money = "";
-    $_SESION[$Email]=$_POST["Email"];
-    $_SESION[$Password]=$_POST["Password"];
-    $_SESION[$Money]=$_POST["Money"];
-    ?>
+
 
     <form action="magazin.php" class="container" method="post">
       <h1>Login</h1>
@@ -46,7 +42,12 @@ include 'session.php';
       <br><br>
       <button type="submit" class="button3">Login</button>
     </form>
-
+    <?php
+    $Email =  $Password = $Money = "";
+    $_SESION[$Email]=$_POST["Email"];
+    $_SESION[$Password]=$_POST["Password"];
+    $_SESION[$Money]=$_POST["Money"];
+    ?>
   </center>
   <footer>
     <p> ALEXIX FASHION </p>

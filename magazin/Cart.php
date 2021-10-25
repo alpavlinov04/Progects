@@ -1,5 +1,6 @@
 <?php
 include 'session.php';
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -48,6 +49,7 @@ include 'session.php';
     color: black;
   }
   .button3 {background-color: white;}
+
   </style>
 </head>
 <body>
@@ -68,7 +70,6 @@ include 'session.php';
   </header>
   <p></p>
   <center>
-
     <form action="cart.php" method="get">
       <div class="small-container cart-page">
         <table>
@@ -80,7 +81,6 @@ include 'session.php';
           <tr>
             <td>
               <div class="cart-info">
-
                 <img src="<?php echo $cart['image']; ?>">
                 <div>
                   <p>"<?php echo $cart['name']; ?>"</p>
@@ -94,35 +94,8 @@ include 'session.php';
             </table>
           </div>
         </form>
+          <a href="finish.php"><button type="submit" class="button3">Finish</button></a>
 
-        <form action="magazin.php" class="container" method="post">
-          <h1>Cart</h1>
-          <label for="name"><b>Name</b></label>
-          <input type="text" placeholder="Enter Name" name="name" required>
-          <br><br>
-          <label for="text"><b>Country</b></label>
-          <input type="text" placeholder="Enter Country" name="country" required>
-          <br><br>
-          <label for="text"><b>City</b></label>
-          <input type="text" placeholder="Enter City " name="city" required>
-          <br><br>
-          <label for="text"><b>Address</b></label>
-          <input type="text" placeholder="Enter Address " name="address" required>
-          <br><br>
-          <label for="number"><b>Post Code</b></label>
-          <input type="number" placeholder="Enter Post Code " name="postCode" required>
-          <br><br>
-          <button type="submit" class="button3">Finish</button>
-        </form>
-        <br><br>
-        <?php
-        $Name = $Country = $City = $Address = $PostsCode = "";
-
-        $_SESSION["Name"]=$_POST["Name"];
-        $_SESSION["Address"]=$_POST["Address"];
-        $_SESSION["Country"]=$_POST["Country"];
-        ?>
-      </center>
       <footer>
         <p> ALEXIX FASHION </p>
         <p> Contact </p>

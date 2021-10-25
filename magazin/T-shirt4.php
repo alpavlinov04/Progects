@@ -9,6 +9,12 @@ include 'session.php';
   <title>ALEXIX</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+</style>
 </head>
 <body>
   <?php
@@ -54,14 +60,19 @@ include 'session.php';
     <input type="hidden" name="custId" value="<?php echo $key; ?>">
     <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
   </form>
+  <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
   <?php
-  $tshirt4 = [
+  $tshirt4 = array(
     'name' => "Boys T-shirt",
     'price' => "5 BGN",
     'image' => "T-shirt4.jpg",
     'link' => "T-shirt4.php",
     'Size' => "Size",
-    ];
+  );
     $_SESSION['cart'] = $tshirt4;
     array_push($tshirt4, $cart);
     ?>
