@@ -50,15 +50,33 @@ include 'session.php';
   }
   .button3 {background-color: white;}
 
+  div.scrollmenu {
+    background-color: #FFFFCC;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  div.scrollmenu a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+
   </style>
 </head>
 <body>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
-  <ul>
-    <li><a class="active" href="magazin.php">Home</a></li>
-    <li><a href="Contact.php">Contact</a></li>
-  </ul>
+  <div class="scrollmenu">
+    <a href="magazin.php">Home</a>
+    <a href="Contact.php">Contact</a>
+  </div>
 
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
@@ -94,14 +112,14 @@ include 'session.php';
             </table>
           </div>
         </form>
-          <a href="finish.php"><button type="submit" class="button3">Finish</button></a>
+        <a href="finish.php"><button type="submit" class="button3">Finish</button></a>
 
-      <footer>
-        <p> ALEXIX FASHION </p>
-        <p> Contact </p>
-        <p> E-mail: alekspav2004@gmail.com </p>
-        <p> Phone number: +359876714631 </p>
-        <p> Address: City of Vratsa, Kokiche Street 14 </p>
-      </footer>
-    </body>
-    </html>
+        <footer>
+          <p> ALEXIX FASHION </p>
+          <p> Contact </p>
+          <p> E-mail: alekspav2004@gmail.com </p>
+          <p> Phone number: +359876714631 </p>
+          <p> Address: City of Vratsa, Kokiche Street 14 </p>
+        </footer>
+      </body>
+      </html>

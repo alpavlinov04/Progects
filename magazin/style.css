@@ -43,31 +43,9 @@ header {
   text-align: center;
   font-size: 18px;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #FFFFCC;
-}
 
-li {
-  float: left;
-  border-right:1px solid #bbb;
-  border-bottom: 1px solid #bbb;
-}
 
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
 
-li a:hover {
-  background-color: white;
-}
 article {
   -webkit-flex: 4;
   -ms-flex: 4;

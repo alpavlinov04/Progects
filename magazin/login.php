@@ -7,15 +7,34 @@ include 'session.php';
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <title>ALEXIX</title>
+  <style>
+  div.scrollmenu {
+    background-color: #FFFFCC;
+    overflow: auto;
+    white-space: nowrap;
+  }
 
+  div.scrollmenu a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+  </style>
 </head>
 <body>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
-  <ul>
-    <li><a class="active" href="magazin.php">Home</a></li>
-    <li><a href="Contact.php">Contact</a></li>
-  </ul>
+  <div class="scrollmenu">
+    <a href="magazin.php">Home</a>
+    <a href="Contact.php">Contact</a>
+  </div>
+  
 
   <header>
     <h1>ALEXIX ONLINE SHOP</h1>
