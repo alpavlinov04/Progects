@@ -149,13 +149,13 @@ include 'session.php';
 
       <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="GirlT-shirt.jpg" style="width:auto">
+        <img src="GirlT-shirt.jpg" style="width:60%">
 
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
-        <img src="GirlT-shirt2.jpg" style="width:auto">
+        <img src="GirlT-shirt2.jpg" style="width:60%">
       </div>
 
     </div>
