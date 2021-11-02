@@ -1,4 +1,9 @@
 <?php
+$conn = mysqli_connect('localhost', 'root', '', 'clothes');
+    if (mysqli_connect_errno()){
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	die();
+	}
 session_set_cookie_params("1800");
 session_start();
 
@@ -41,5 +46,6 @@ $products = [
   ],
 ];
 
-$cart = [];
+$carts = 'carts';
+
 ?>

@@ -1,6 +1,5 @@
 <?php
 include 'session.php';
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -88,7 +87,7 @@ include 'session.php';
   </header>
   <p></p>
   <center>
-    <form action="cart.php" method="get">
+    <form action="Cart.php" method="get">
       <div class="small-container cart-page">
         <table>
           <tr>
@@ -99,20 +98,21 @@ include 'session.php';
           <tr>
             <td>
               <div class="cart-info">
-                <img src="<?php echo $cart['image']; ?>">
+                <img src="<?php echo $carts['product_image']; ?>">
                 <div>
-                  <p>"<?php echo $cart['name']; ?>"</p>
-                  <small>Price: <?php echo $cart['price']; ?></small>
+                  <p>"<?php echo $carts['product_name']; ?>"</p>
+                  <small>Price: <?php echo $carts['product_price']; ?></small>
                   <br>
                   <a href="">Remove</a>
                 </td>
               </tr>
-              <td><input type="number" value=" " min="0" max="100"</td>
-              <td>"<?php echo $cart['price']; ?>"</td>
+              <td><input type="number" value=" " min="1" max="100"</td>
+              <td>"<?php echo $carts['product_price']; ?>"</td>
             </table>
           </div>
         </form>
         <a href="finish.php"><button type="submit" class="button3">Finish</button></a>
+
 
         <footer>
           <p> ALEXIX FASHION </p>

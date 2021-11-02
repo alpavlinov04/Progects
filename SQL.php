@@ -15,7 +15,7 @@
   ?>
   <h2>Insert, Select</h2>
   <?php
-  $insert_query = "INSERT INTO `units`(`unit_name`) VALUES ('брой')";
+  $insert_query = "INSERT INTO `units`(`unit_name`) VALUES ('count')";
   echo'<br>';
   $result = mysqli_query($conn, $insert_query);
   if ($result) {
@@ -48,12 +48,11 @@
   echo'<br>';
   ?>
   <h3>Form</h3>
-  <form method="post" action="">
+  <form method="post">
     <p>Enter unit name</p>
     <input type="text" name="unit_name">
     <input type="submit" name="submit" value="save">
   </form>
-
   <?php
   if( isset($_POST['unit_name'])){
     $unit_name = $_POST['unit_name'];
@@ -62,7 +61,7 @@
   }
   ?>
 
-  <form method="post" action="">
+  <form method="post">
     <p>Enter product name</p>
     <input type="text" name="product_name">
     <input type="submit" name="submit" value="save">
@@ -71,7 +70,8 @@
   <?php
   if(isset($_POST['product_name'])){
     $product_name = $_POST['product_name'];
-
+    $insert_query = "INSERT INTO `products`(`product_name`) VALUES ('$product_name')";
+    $result = mysqli_query($conn, $insert_query);
   }
   ?>
 

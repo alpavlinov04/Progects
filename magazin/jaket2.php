@@ -116,12 +116,12 @@ include 'session.php';
 </head>
 <body>
   <?php
-  $Size = "";
+  $product_size = "";
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
-    $Size = test_input($_POST["Size"]);
+    $product_size = test_input($_POST["product_size"]);
   }
-  $_SESSION['Size'] = $_POST['Size'];
+  $_SESSION['product_size'] = $_POST['product_size'];
   ?>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
@@ -204,15 +204,15 @@ include 'session.php';
   <input type="checkbox" name="XL" value="XL">XL
   <input type="checkbox" name="XXL" value="XL">XXL
 </form>
-<form method="post" action="Cart.php">
-  <input type="number" class="peaces" min="0" max="100">
-  <input type="hidden" name="custId" value="<?php echo $key; ?>">
-  <button class="Cart" href="Cart.php"><i style='font-size:24px' class='fas'>&#xf217;</i></button>
+<form action="Cart.php" method="post">
+  <input type="number" name="carts" value="1" min="1" max="<? $products['quantity']?>" placeholder="Quantity" required>
+  <input type="hidden" name="product_id" value="<? $products['id']?>">
+  <input type="submit" value="Add To Cart">
 </form>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
+<span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
 <?php
 $jacket2 = array(
@@ -222,8 +222,11 @@ $jacket2 = array(
   'link' => "jaket2.php",
   'Size' => "Size",
 );
-$_SESSION['cart'] = $jacket2;
-array_push($jacket2, $cart);
+if( isset($_POST['carts'])){
+  $carts = $_POST['carts'];
+  $insert_query = "INSERT INTO `carts`('cart_name', 'cart_prize', 'cart_size', 'cart_quantiy', 'cart_image', 'link') VALUES ($carts)";
+  $result = mysqli_query($con, $insert_query);
+}
 ?>
 <footer>
   <p> ALEXIX FASHION </p>

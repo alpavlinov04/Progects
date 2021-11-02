@@ -78,14 +78,19 @@ include 'session.php';
         <table>
           <tr>
             <div class="card">
-
-
               <a target="_blank" href="<?php echo $product['link']; ?>">
                 <div class="desc"><img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" width="250" height="300"></div>
                 <a href="<?php echo $product['link']; ?>">"<?php echo $product['name']; ?>"</a>
                 <br>
                 <a><?php echo $product['price']; ?></a>
                 <p><a href="Cart.php"><button>Add to Cart</button></a></p>
+                <?php
+                if(isset($_POST['carts'])){
+                  $carts = $_POST['carts'];
+                  $insert_query = "INSERT INTO `carts`('cart_name', 'cart_prize', 'cart_size', 'cart_quantiy', 'cart_image', 'link') VALUES ($carts)";
+                  $result = mysqli_query($con, $insert_query);
+                }
+                 ?>
               </div>
               <div class="clearfix"></div>
             <?php endforeach; ?>

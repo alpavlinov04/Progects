@@ -116,12 +116,12 @@ include 'session.php';
 </head>
 <body>
   <?php
-  $Size = "";
+  $product_size = "product_size";
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
-    $Size = test_input($_POST["Size"]);
+    $product_size = test_input($_POST["product_size"]);
   }
-  $_SESSION['Size'] = $_POST['Size'];
+  $_SESSION['product_size'] = $_POST['product_size'];
 
   ?>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
@@ -204,32 +204,37 @@ include 'session.php';
 <br>
 <form method="post" action="Cart.php" required>
   Size:
-  <input type="checkbox" name="S" value="">S
-  <input type="checkbox" name="M" value="M">M
-  <input type="checkbox" name="L" value="L">L
-  <input type="checkbox" name="XL" value="XL">XL
-  <input type="checkbox" name="XXL" value="XL" >XXL
+  <input type="checkbox" name="product_size" value="">S
+  <input type="checkbox" name="product_size" value="M">M
+  <input type="checkbox" name="product_size" value="L">L
+  <input type="checkbox" name="product_size" value="XL">XL
+  <input type="checkbox" name="product_size" value="XL" >XXL
 </form>
-<form method="post" action="Cart.php">
-  <input type="number" class="peaces"  min="0" max="100">
-  <input type="hidden" name="custId" value="<?php echo $key; ?>">
-  <button class="Cart" required><i style='font-size:24px' class='fas' >&#xf217;</i></button>
+<form action="Cart.php" method="post">
+  <input type="number" name="carts" value="1" min="1" max="<? echo $products['quantity']?>" placeholder="Quantity" required>
+  <input type="hidden" name="carts" value="<? echo $products['id']?>">
+  <input type="submit" value="Add To Cart">
+  <?php
+  if( isset($_POST['carts'])){
+    $carts = $_POST['carts'];
+    $insert_query = "INSERT INTO `carts`('cart_name', 'cart_prize', 'cart_size', 'cart_quantiy', 'cart_image', 'link') VALUES ($carts)";
+    $result = mysqli_query($con, $insert_query);
+  }
+   ?>
 </form>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
+<span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
 <?php
 $jacket = array(
-  'name' => "Mens winter jaket",
-  'price' => "90 BGN",
-  'image' => "Jacket.jpg",
+  'product_name' => "Mens winter jaket",
+  'product_price' => "90 BGN",
+  'product_image' => "Jacket.jpg",
   'link' => "jaket.php",
-  'Size' => "Size",
+  'product_size' => "size",
 );
-$_SESSION['cart'] = $jacket;
-array_push($cart, $jacket);
 ?>
 <footer>
   <p> ALEXIX FASHION </p>
