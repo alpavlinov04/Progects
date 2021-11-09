@@ -2,12 +2,6 @@
 <html lang="bg" lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
-  <style>
-  body {
-    font-family: 'Alegreya SC';font-size: 22px;
-}
-  </style>
 </head>
 <body>
   <h1>Connection</h1>
@@ -39,7 +33,7 @@
     <input type="submit" name="submit" value="Insert">
   </form>
   <?php
-  if( isset($_POST)){
+  if(isset($_POST['recipie_name'])){
     $recipie_name = $_POST['recipie_name'];
     $recipie_descr = $_POST['recipie_descr'];
     $prep_time = $_POST['prep_time'];

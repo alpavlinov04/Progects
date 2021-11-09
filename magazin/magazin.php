@@ -57,6 +57,7 @@ include 'session.php';
   </style>
 </head>
 <body>
+
   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
 

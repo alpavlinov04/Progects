@@ -91,17 +91,17 @@ main .placeorder p {
     </header>
     <div class="placeorder content-wrapper">
     <h1>Your Order Has Been Placed</h1>
-    <p>Thank you for ordering with us, we'll contact you by email with your order details.</p>
+    <p>Thank you for ordering with us, we'll contact you by email with your order details. Sorry if your order will be late. Because of covid-19 the orders sometimes is lating. Please accept our apologies!</p>
 </div>
-    <form action="/action_page.php">
+    <form action="magazin.php">
   <div class="container">
     <h2>Subscribe to our Newsletter</h2>
     <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.</p>
   </div>
 
   <div class="container" style="background-color:white">
-    <input type="text" placeholder="Name" name="name" required>
-    <input type="text" placeholder="Email address" name="mail" required>
+    <input type="text" placeholder="Name" name="name" >
+    <input type="text" placeholder="Email address" name="mail" >
     <label>
       <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
     </label>
