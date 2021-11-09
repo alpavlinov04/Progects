@@ -53,6 +53,7 @@ include 'session.php';
   .card button:hover {
     opacity: 0.7;
   }
+
   </style>
 </head>
 <body>
@@ -95,7 +96,6 @@ include 'session.php';
               <div class="clearfix"></div>
             <?php endforeach; ?>
           </div>
-
         </article>
         <footer>
           <p> ALEXIX FASHION </p>

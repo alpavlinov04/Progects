@@ -119,9 +119,9 @@ include 'session.php';
   $product_size = "product_size";
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
-    $product_size = test_input($_POST["product_size"]);
+    $product_size = test_input($_POST["$product_size"]);
   }
-  $_SESSION['product_size'] = $_POST['product_size'];
+  $_SESSION['$product_size'] = $_POST['$product_size'];
 
   ?>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
@@ -217,7 +217,7 @@ include 'session.php';
   <?php
   if( isset($_POST['carts'])){
     $carts = $_POST['carts'];
-    $insert_query = "INSERT INTO `carts`('cart_name', 'cart_prize', 'cart_size', 'cart_quantiy', 'cart_image', 'link') VALUES ($carts)";
+    $insert_query = "INSERT INTO `carts`('cart_name', 'cart_prize', 'cart_size', 'cart_quantiy', 'cart_image', 'link') VALUES ('carts')";
     $result = mysqli_query($con, $insert_query);
   }
    ?>
