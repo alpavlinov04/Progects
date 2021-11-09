@@ -117,11 +117,13 @@ include 'session.php';
 <body>
   <?php
   $product_size = "";
+  if(isset($_POST["product_size"])){
   if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
     $product_size = test_input($_POST["product_size"]);
   }
   $_SESSION['product_size'] = $_POST['product_size'];
+}
   ?>
   <a class="button button2" href="Cart.php" align="center">Cart</a>
   <a class="button button1" href="login.php" align="center">Login</a>
@@ -195,7 +197,7 @@ include 'session.php';
 </center>
 <p></p>
 <p>Very good Female winter jacket. Ideal for all winter conditions. With additional sweatshirt. Internal pocket. Ideally up to -15 degrees.</p>
-<p style="text-align:left">60 лв.</p>
+<p>60 лв.</p>
 <form method="post" action="Cart.php">
   Size:
   <input type="checkbox" name="S" value="">S

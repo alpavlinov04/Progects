@@ -1,5 +1,6 @@
 <?php
 include 'session.php';
+$select_query = "SELECT * FROM `carts` WHERE 1";
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -87,6 +88,7 @@ include 'session.php';
   </header>
   <p></p>
   <center>
+    <a href="finish.php"><button type="submit" class="button3">Finish</button></a>
     <form action="Cart.php" method="get">
       <div class="small-container cart-page">
         <table>
@@ -98,16 +100,16 @@ include 'session.php';
           <tr>
             <td>
               <div class="cart-info">
-                <img src="<?php echo $carts['product_image']; ?>">
+                <img src="<?php echo $carts['cart_image']; ?>">
                 <div>
-                  <p>"<?php echo $carts['product_name']; ?>"</p>
-                  <small>Price: <?php echo $carts['product_price']; ?></small>
+                  <p>"<?php echo $carts['cart_name']; ?>"</p>
+                  <small>Price: <?php echo $carts['cart_price']; ?></small>
                   <br>
                   <a href="">Remove</a>
                 </td>
               </tr>
               <td><input type="number" value=" " min="1" max="100"</td>
-              <td>"<?php echo $carts['product_price']; ?>"</td>
+              <td>"<?php echo $carts['cart_prize']; ?>"</td>
             </table>
           </div>
         </form>
